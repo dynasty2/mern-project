@@ -1,24 +1,26 @@
-import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Route, Link } from "react-router-dom";
+import React, { Component } from 'react';
+
+class App extends Component {
+  constructor(props){
+    super(props);
+  }
 
 render() {
   return (
     <div>
       <nav>
-      // the link component produces an a element
-        <Link to=""></Link>
-        <Link to=""></Link>
+        <Link to="">link1</Link>
+        <Link to="">link2</Link>
       </nav>
       <main>
-        // routes render the specified component we pass in
-        <Route path="" render={}/>
-        // we can give either a render or a component prop.
-        <Route path="" component={}/>
+        <Route/>
+        <Route/>
       </main>
     </div>
   )
-}
-
+};
+  }
 export default App;
