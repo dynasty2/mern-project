@@ -1,26 +1,24 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Route, Link } from "react-router-dom";
 
-function App() {
+render() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <nav>
+      // the link component produces an a element
+        <Link to=""></Link>
+        <Link to=""></Link>
+      </nav>
+      <main>
+        // routes render the specified component we pass in
+        <Route path="" render={}/>
+        // we can give either a render or a component prop.
+        <Route path="" component={}/>
+      </main>
     </div>
-  );
+  )
 }
 
 export default App;
