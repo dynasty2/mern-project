@@ -1,9 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
-import { Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import React, { Component } from 'react';
 // import axios from '../package.json';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './components/MoviesList.js';
+import './components/EditMovie.js';
+import './components/CreateMovie.js';
 
 class App extends Component {
   constructor(props){
@@ -16,16 +17,14 @@ class App extends Component {
 
 render() {
   return (
-    <div>
-      <nav>
-        <Link to="">link1</Link>
-        <Link to="">link2</Link>
-      </nav>
-      <main>
-        <Route/>
-        <Route/>
-      </main>
+    <Router>
+    <div className="container">
+      <h2>Mern Stack shit hott</h2>
     </div>
+    <Route path="/" exact component={MoviesList} />
+    <Route path="/edit/:id" component={EditMovie} />
+    <Route path="/create" component={CreateMovie} />  
+    </Router>
   )
 };
   }
