@@ -67,7 +67,7 @@ onSubmit(e) {
         releaseDate: this.state.releaseDate,
         voteAverage: this.state.voteAverage
     };
-    axios.post('http://json-api-amt.herokuapp.com/movie/update/'+this.props.match.params.id, obj) //change the routes in API. Make more simple/right
+    axios.post('http://json-api-amt.herokuapp.com/movie/:name'+this.props.match.params.id, obj) //change the routes in API. Make more simple/right
         .then(res => console.log(res.data))
 
         this.props.history.push('/');

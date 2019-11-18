@@ -9,7 +9,7 @@ const Movie = props => (
         <td>{props.movie.releaseDate}</td>
         <td>{props.movie.voteAverage}</td>
         <td>
-            <Link to={"/movie/"+props.movie._id}>Edit</Link>
+            <Link to={"/edit/"+props.movie._id}>Edit</Link>
         </td>
     </tr>
 )
