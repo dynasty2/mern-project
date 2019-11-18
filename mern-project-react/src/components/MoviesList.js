@@ -22,7 +22,7 @@ export default class MoviesList extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://json-api-amt.herokuapp.com/movie')
+        axios.get('http://json-api-amt.herokuapp.com/movie')
             .then(response => {
                 this.setState({movies: response.data});
             })
@@ -61,3 +61,4 @@ movieList() {
 };
 
 // https://json-api-amt.herokuapp.com/movie
+// http://localhost:8080/movie/
