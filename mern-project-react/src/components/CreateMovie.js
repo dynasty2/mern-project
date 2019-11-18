@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import axios from 'axios';
 
 export default class CreateMovie extends Component {
 
@@ -53,6 +54,16 @@ export default class CreateMovie extends Component {
             console.log(`Movie Release Date: ${this.state.releaseDate}`);
             console.log(`Movie Vote Average: ${this.state.voteAverage}`);
 //on submit logic
+
+const newMovie = {
+    title: this.state.title,
+    overview: this.state.overview,
+    releaseDate: this.state.releaseDate,
+    voteAverage: this.state.voteAverage
+}
+
+axios.post('localhost:4000/movie', newMovie)
+    .then(res => console.log(res.data));
 
         this.setState({
             title: String,
